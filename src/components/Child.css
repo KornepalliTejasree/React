@@ -1,0 +1,12 @@
+.card{
+    border:5px solid black;
+    border-radius:20px ;
+    width:700px;
+    padding: 170px;
+}
+.card h1{
+    color:red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    align-items: center;
+}
