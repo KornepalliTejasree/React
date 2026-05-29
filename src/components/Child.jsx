@@ -1,12 +1,20 @@
-import React from 'react';
-import "./Child.css";
-const Child = (prop) => {
+import React from 'react'
+
+const Child = ({count,counter}) => {
+  const click=()=>{
+    counter(count+100);
+  }
+  const clickab=()=>{
+    counter(count-100);
+  }
+  const clicka=()=>{
+    counter(count*0);
+  }
   return (
-    <div className="card">
-  <img src={prop.Biryani} alt="" width={700}/>
-  <h1>{prop.title}</h1>
-  <h1>{prop.Price}</h1>
-  <a href='https://www.swiggy.com/'> <button>Order now from swiggy</button></a>
+    <div>
+      <button onClick={click}>You know smtg Jon Snow!</button>
+      <button onClick={clickab}>You know ntg Jon Snow!</button>
+      <button onClick={clicka}>Did you know somthing Jon Snow?</button>
     </div>
   )
 }
