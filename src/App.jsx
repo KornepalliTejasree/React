@@ -1,11 +1,10 @@
-import React,{useState} from 'react'
-import Child from "./components/Child"
+import React, { useState } from 'react'
+
 const App = () => {
-  const [count,setCount]=useState(100);
+  const [showPassword,setShowPassword]=useState(false);
   return (
     <div>
-      <p>{count}</p>
-      <Child count={count} counter={setCount}/>
+      <input type={showPassword?'text':'password'} placeholder='Enter the password'></input><button onClick={()=>{setShowPassword(!showPassword)}}>{showPassword?"Hide":"Show"}</button>
     </div>
   )
 }
