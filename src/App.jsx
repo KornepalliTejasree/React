@@ -1,10 +1,20 @@
 import React, { useState } from 'react'
-
+import "./App.css";
 const App = () => {
-  const [showPassword,setShowPassword]=useState(false);
+ const [text,setText]=useState("");
+ const [submition,setSubmition]=useState("");
+ function handleSubmission(event){
+  event.preventDefault();
+  setSubmition(text);
+ }
   return (
     <div>
-      <input type={showPassword?'text':'password'} placeholder='Enter the password'></input><button onClick={()=>{setShowPassword(!showPassword)}}>{showPassword?"Hide":"Show"}</button>
+      <form onSubmit={handleSubmission}>
+      <input type="text" placeholder='Enter the text'  onChange={(e)=>setText(e.target.value)} />
+      <button>Submit</button>
+      <p>You entered {text}</p>
+      </form>
+      <h1>{submition}</h1>
     </div>
   )
 }
