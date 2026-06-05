@@ -1,12 +1,18 @@
 import React, { useState } from 'react'
-import Timer from "./Timer"
-const App = () => {
-  const [show,setShow]=useState(true);
 
+const App = () => {
+  const [items,setItems]=useState(["Apple","Banana"]);
+  function additem(){
+    setItems([...items,"Mango"]);
+  }
   return (
     <div>
-     <button onClick={()=>{setShow(!show)}}>{show?"Stop Timer":"Start Timer"}</button>
-     {show && <Timer />} 
+      {
+        items.map((fruit,index)=>(
+          <p key={index}>{fruit}</p>
+        ))
+      }
+      <button onClick={additem}>Add item</button>
     </div>
   )
 }
