@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 
 const App = () => {
-  const [items,setItems]=useState(["Apple","Banana"]);
-  function additem(){
-    setItems([...items,"Mango"]);
+  const [but ,setBut]=useState("Active")
+  const handleClick=()=>{
+    if(but==="Active"){
+      setBut("Inactive");
+    }
+    else{
+      setBut("Active");
+    }
   }
   return (
     <div>
-      {
-        items.map((fruit,index)=>(
-          <p key={index}>{fruit}</p>
-        ))
-      }
-      <button onClick={additem}>Add item</button>
+      <button onClick={handleClick} className={but}>{but}</button>
     </div>
   )
 }

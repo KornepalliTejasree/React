@@ -1,15 +1,8 @@
-.card{
-  border: 2px solid black;
-  border-radius: 5%;
-  width:150px;
-  padding: 50px ;
-  height:100px;
-  margin-left: auto;
-margin-right: auto;
-margin-top: 500px;
-margin-bottom: auto;
+.Active{
+    background-color: Green;
+    color: white;
 }
-button{
-  background-color: aquamarine;
-  width:auto;
+.Inactive{
+    background-color: red;
+    color: white;
 }
