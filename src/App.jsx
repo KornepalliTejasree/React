@@ -1,18 +1,12 @@
 import React, { useState } from 'react'
-
+import Counter from './Counter';
+import Reset from './Reset';
 const App = () => {
-  const [but ,setBut]=useState("Active")
-  const handleClick=()=>{
-    if(but==="Active"){
-      setBut("Inactive");
-    }
-    else{
-      setBut("Active");
-    }
-  }
+  const [count,setCount]=useState(0);
   return (
     <div>
-      <button onClick={handleClick} className={but}>{but}</button>
+      <Counter count={count} setCount={setCount}/>
+      <Reset setCount={setCount}/>
     </div>
   )
 }
