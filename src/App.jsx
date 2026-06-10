@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import Counter from './Counter';
-import Reset from './Reset';
+import Dashboard from './components/Dashboard';
 const App = () => {
-  const [count,setCount]=useState(0);
+  const [name,setName]=useState("Rohith");
   return (
     <div>
-      <Counter count={count} setCount={setCount}/>
-      <Reset setCount={setCount}/>
+      <p>App</p>
+      <Dashboard name={name}/>
     </div>
   )
 }
