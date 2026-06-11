@@ -1,9 +1,12 @@
 import React from 'react'
-
-const Username = ({name}) => {
+import { useContext } from 'react'
+import {UserContext} from "./UserContext"
+const Username = () => {
+  const {name,count}=useContext(UserContext);
   return (
     <div>
       <p>Username:{name}</p>
+      <p>Count:{count}</p>
     </div>
   )
 }
