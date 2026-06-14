@@ -1,8 +1,13 @@
-.Active{
-    background-color: Green;
+.products-container{
+   background-color: black;
     color: white;
 }
-.Inactive{
-    background-color: red;
-    color: white;
+.products-grid{
+    display: grid;
+     grid-template-columns: repeat(4, 1fr);
+}
+.product-card img {
+  width: 100%;
+  height: 200px;      /* Same height for all images */
+  object-fit: contain; /* Shows entire image */
 }
